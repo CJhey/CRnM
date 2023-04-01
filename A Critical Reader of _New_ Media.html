@@ -564,12 +564,17 @@ So how do we build a [[definition of culture]] that works for us?</tw-passagedat
 
 &lt;img src=&quot;img/object01.png&quot;&gt;
 
-What is the interaction here?
+What is the interaction here? Tell me what you think.
 
-&lt;&lt;textbox &quot;$interaction&quot; &quot;What do you think?&quot; autofocus&gt;&gt;
-&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
-
-So... $interaction
+&lt;&lt;textbox &quot;_input&quot; &quot;What do you think?&quot; autofocus&gt;&gt;
+&lt;&lt;button &quot;Submit Answer&quot;&gt;&gt;
+&lt;&lt;if [&quot;nothing&quot;, &quot;whatever&quot;, &quot;idk&quot;].includes(_input.toLowerCase())&gt;&gt;
+		&lt;&lt;replace &quot;#output&quot;&gt;&gt;&lt;&lt;= either([&quot;It has to be something!&quot;, &quot;yea wtvs&quot;, &quot;ya idk either&quot;])&gt;&gt;&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;replace &quot;#output&quot;&gt;&gt;&lt;&lt;= either([&quot;Really?&quot;, &quot;I don&#39;t know...&quot;, &quot;Well...&quot;])&gt;&gt;&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+&lt;span id=&quot;output&quot;&gt;&lt;/span&gt;
 
 Now that you clicked submit, you &lt;i&gt;kind of&lt;/i&gt; interacted with me.
 But did you? The text you wrote is not submitted anywhere, it&#39;s a static element on the website. So what was that interaction like?
