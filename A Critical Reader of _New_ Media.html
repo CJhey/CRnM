@@ -123,7 +123,7 @@ img {
   border-left: 0;
   margin: 0;
   padding: 0;
-  line-height:80vh;
+  line-height:40vh;
 }
 .passage {
   position:absolute;
@@ -195,7 +195,7 @@ a.internalLink:nth-child(3n+2), a.externalLink:nth-child(3n+2) {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px;
+    font-size: 24px;
   letter-spacing: 0px
 }
 
@@ -307,6 +307,7 @@ font-size: 9px;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -314,27 +315,20 @@ font-size: 9px;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  -webkit-animation-name: fadeIn; /* Fade in the background */
-  -webkit-animation-duration: 0.4s;
-  animation-name: fadeIn;
-  animation-duration: 0.4s
 }
 
 /* Modal Content */
 .modal-content {
-  position: fixed;
-  bottom: 0;
   background-color: #fefefe;
-  width: 100%;
-  -webkit-animation-name: slideIn;
-  -webkit-animation-duration: 0.4s;
-  animation-name: slideIn;
-  animation-duration: 0.4s
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
 /* The Close Button */
 .close {
-  color: white;
+  color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -345,49 +339,6 @@ font-size: 9px;
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-
-.modal-header-text {
-  font-size: 40px;
-}
-
-.modal-footer-text {
-  font-size: 40px;
-}
-
-/* Add Animation */
-@-webkit-keyframes slideIn {
-  from {bottom: -300px; opacity: 0} 
-  to {bottom: 0; opacity: 1}
-}
-
-@keyframes slideIn {
-  from {bottom: -300px; opacity: 0}
-  to {bottom: 0; opacity: 1}
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.ui.stowBarInitially = true;
 
 if (document.location.href.toLowerCase().includes("/temp/") || document.location.href.toLowerCase().includes("/private/") || hasOwnProperty.call(window, "storyFormat")) {
@@ -990,21 +941,14 @@ A different question we may ask is whether [[we narrate the world]].
 Whether this theory is right or wrong, we would do well to assess just what exactly we think about when we interact with cultural objects.
 In any case, whether we think the narration comes from the object, the context or ourselves, we would do well to consider [[how narration works]].</tw-passagedata><tw-passagedata pid="88" name="how narration works" tags="" position="565,1686" size="100,100">&lt;!-- Trigger/Open The Modal --&gt;
 &lt;button id=&quot;myBtn&quot;&gt;&lt;img src=&quot;img/todorov.jpg&quot;&gt;&lt;/button&gt;
-
 &lt;!-- The Modal --&gt;
 &lt;div id=&quot;myModal&quot; class=&quot;modal&quot;&gt;
 
   &lt;!-- Modal content --&gt;
   &lt;div class=&quot;modal-content&quot;&gt;
-    &lt;div class=&quot;modal-header&quot;&gt;
-      &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;
-      &lt;p&gt;Todorov says:&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;modal-body&quot;&gt;
-      &lt;p&gt;Narration!&lt;/p&gt;
-      &lt;p&gt;All narrative objects have a functional form. Narratives start at an equilibrium, which is broken, and restored (or at least tried), returning thus to a new equilibrium!&lt;/p&gt;
-	  &lt;p&gt;[[Equilibrium?]]&lt;/p&gt;
-    &lt;/div&gt;
+    &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;p&gt;All narrative objects have a functional form. Narratives start at an equilibrium, which is broken, and restored (or at least tried), returning thus to a new equilibrium!&lt;/p&gt;
+	&lt;p&gt;[[Equilibrium?]]&lt;/p&gt;
   &lt;/div&gt;
 
 &lt;/div&gt;
