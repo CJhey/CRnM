@@ -193,6 +193,20 @@ a.internalLink:nth-child(3n+2), a.externalLink:nth-child(3n+2) {
 	border-right: 1px solid #444;
 }
 
+/* default size for toggle button */
+.toggle-button {
+  width: 50px;
+  height: 25px;
+}
+
+/* larger size for toggle button on phone screens */
+@media (max-width: 767px) {
+  .toggle-button {
+    width: 75px;
+    height: 35px;
+  }
+}
+
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -249,34 +263,54 @@ font-size: 9px;
 }
 
 /* Font Size Buttons - Start */
+
+/* Style for the fullscreen button */
 .fullscreenImg {
-	cursor: pointer;
-	transition: 0.3s;
-	border-radius: 3px;
-	position: absolute;
-	top: 40px;
-	left: 252px;
-	vertical-align: text-bottom;
-	height: 25px;
-	visibility: visible;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 3px;
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  vertical-align: text-bottom;
+  height: 25px;
+  visibility: visible;
 }
+
+/* Style for the fullscreen button when hovered */
 .fullscreenImg:hover {
-	background: #444444;
+  background: #444444;
 }
+
+/* Margin for the main story area */
 #story {
-	margin-left: 320px;
-	margin-right: 40px;
+  margin-left: 320px;
+  margin-right: 40px;
 }
+
+/* Media query for screens with a maximum width of 1136px */
 @media screen and (max-width: 1136px) {
-	#story {
-		margin-left: 290px;
-		margin-right: 24px;
-	}
-	#ui-bar.stowed~#story {
-		margin-left: 42px;
-	}
+  /* Adjusted margin for the main story area */
+  #story {
+    margin-left: 290px;
+    margin-right: 24px;
+  }
+  
+  /* Margin adjustment for the main story area when the ui-bar is stowed */
+  #ui-bar.stowed~#story {
+    margin-left: 42px;
+  }
+
+  /* Style adjustments for the fullscreen button on smaller screens */
+  .fullscreenImg {
+    left: 10px;
+    top: 10px;
+  }
 }
-/* Font Size Buttons - End */
+
+/* Font Size Buttons - End *
+
+
 
 .tooltip {
   position: relative;
@@ -339,20 +373,6 @@ font-size: 9px;
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* default size for toggle button */
-.toggle-button {
-  width: 50px;
-  height: 25px;
-}
-
-/* larger size for toggle button on phone screens */
-@media (max-width: 767px) {
-  .toggle-button {
-    width: 75px;
-    height: 35px;
-  }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.ui.stowBarInitially = true;
 
 if (document.location.href.toLowerCase().includes("/temp/") || document.location.href.toLowerCase().includes("/private/") || hasOwnProperty.call(window, "storyFormat")) {
